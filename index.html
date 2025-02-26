@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <title>Clock</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<label for="time">时间：</label><input type="text" id="time" value=""/>
+
+<script>
+  setInterval(function () {
+    var date = new Date();
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+    var ms = date.getMilliseconds();
+    var time = h + ":" + m + ":" + s + ":" + ms;
+    document.getElementById("time").value = time;
+  }, 1);
+</script>
+</body>
+</html>
